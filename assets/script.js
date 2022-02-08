@@ -4,9 +4,11 @@ console.log('JavaScript code has loaded!')
 let yourName = "Carmen Hernández" // HINT: Replace this with your own name!
 
 // We'll use these variables to track the counts of each cookie type
+
 let gb = 0
 let cc = 0
 let sugar = 0
+let total = 0
 
 // selecting the element with an id of credit
 const credit = document.querySelector('#credit')
@@ -17,7 +19,7 @@ let ccPlusBtn = document.querySelector('#add-cc')
 let ccMinusBtn = document.querySelector('#minus-cc')
 let sugarPlusBtn = document.querySelector('#add-sugar')
 let sugarMinusBtn = document.querySelector('#minus-sugar')
-let Total= document.querySelector('#qty-total')
+let Totalcookies= document.querySelector('#qty-total')
 let totalgb =document.querySelector('#qty-gb')
 let totalcc = document.querySelector('#qty-cc')
 let totalsugar = document.querySelector('#qty-sugar')
@@ -26,16 +28,19 @@ let totalsugar = document.querySelector('#qty-sugar')
 gbPlusBtn.addEventListener('click', function(e) {
     gb++
     totalgb.textContent=`${gb}`
+    Totalcookies.textContent= + `${gb}`
 })
 
 gbMinusBtn.addEventListener('click', function(e) {
     gb--
     totalgb.textContent=`${gb}`
+    Totalcookies.textContent= - `${gb}`
 })
 
 ccPlusBtn.addEventListener('click', function(e) {
     cc++
     totalcc.textContent=`${cc}`
+    Totalcookies.textContent= `${cc}`
 })
 
 ccMinusBtn.addEventListener('click', function(e) {
@@ -52,9 +57,6 @@ sugarMinusBtn.addEventListener('click', function(e) {
     sugar--
     totalsugar.textContent=`${sugar}`
 })
-
-
-
 
 
 // Code to update name display

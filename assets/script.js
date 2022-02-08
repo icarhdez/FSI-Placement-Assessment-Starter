@@ -8,7 +8,6 @@ let yourName = "Carmen Hernández" // HINT: Replace this with your own name!
 let gb = 0
 let cc = 0
 let sugar = 0
-let total = 0
 
 // selecting the element with an id of credit
 const credit = document.querySelector('#credit')
@@ -23,39 +22,43 @@ let Totalcookies= document.querySelector('#qty-total')
 let totalgb =document.querySelector('#qty-gb')
 let totalcc = document.querySelector('#qty-cc')
 let totalsugar = document.querySelector('#qty-sugar')
+let total = sugar + cc + gb
 
 // Event listener for clicks on the "+" button for Gingerbread cookies
 gbPlusBtn.addEventListener('click', function(e) {
     gb++
-    totalgb.textContent=`${gb}`
-    Totalcookies.textContent= + `${gb}`
+    totalgb.textContent= gb
+    Totalcookies.textContent= gb + cc + sugar
 })
 
 gbMinusBtn.addEventListener('click', function(e) {
     gb--
-    totalgb.textContent=`${gb}`
-    Totalcookies.textContent= - `${gb}`
+    totalgb.textContent= gb
+    Totalcookies.textContent= gb + cc + sugar
 })
 
 ccPlusBtn.addEventListener('click', function(e) {
     cc++
-    totalcc.textContent=`${cc}`
-    Totalcookies.textContent= `${cc}`
+    totalcc.textContent= cc
+    Totalcookies.textContent= gb + cc + sugar
 })
 
 ccMinusBtn.addEventListener('click', function(e) {
     cc--
     totalcc.textContent=`${cc}`
+    Totalcookies.textContent= gb + cc + sugar
 })
 
 sugarPlusBtn.addEventListener('click', function(e) {
     sugar++
     totalsugar.textContent=`${sugar}`
+    Totalcookies.textContent= gb + cc + sugar
 })
 
 sugarMinusBtn.addEventListener('click', function(e) {
     sugar--
     totalsugar.textContent=`${sugar}`
+    Totalcookies.textContent= gb + cc + sugar
 })
 
 
